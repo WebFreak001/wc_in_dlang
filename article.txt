@@ -1,0 +1,39 @@
+wc in less than 1000 characters without a single if statement in D
+
+The Introduction:
+After reading "Beating C With 80 Lines Of Haskell: Wc"
+https://chrispenner.ca/posts/wc found on hackernews.
+I thought D could do better.
+
+The Program:
+So I wrote a wc in D.
+I consists of one file, has 46 lines and 906 characters.
+Sure, it is using D's awesome standard library phobos.
+But then why wouldn't it, its awesome and it comes with D.
+The program itself does not contain a single if statement.
+Talking about imperative programming languages;
+the Haskell wc implementation has seven if statements.
+The D program apart from the main function, it contains three tiny functions.
+I could have easily put all the functionally in one range chain,
+but then it properly would exceed 80 chars per line.
+And that's a major code-smell.
+
+The Performance:
+Is the D wc faster than the coreutils wc?
+No, but it took my 15 minutes to write mine (I had to search for walkLength,
+because I forgot its name).
+Is the Haskell wc faster?
+Absolutely, at least for small files, but then it spawns 16 threads on my test
+box.
+The coreutils wc and the D one only use one core.
+For big files ~1GB the difference between the coreutils and the D program is
+reduced quite a bit to ~15%.
+At this stage its is very likely IO bound, and its fast enough anyway.
+
+The conclusion:
+I'll not claim that one language produces faster than another.
+If you spend crazy time on a micro-benchmark you are going to beat the
+competition.
+That's not real life, who cares.
+But I'll claim, that functional programming in D makes functional programming
+in Haskell look bad.
