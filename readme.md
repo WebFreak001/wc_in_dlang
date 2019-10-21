@@ -9,7 +9,7 @@ I thought D could do better.
 So I wrote a wc in D.
 I consists of one file, has 46 lines and 906 characters.
 Sure, it is using D's awesome standard library phobos.
-But then why wouldn't it, its awesome and it comes with D.
+But then why wouldn't it, its awesome and it comes with every D compiler.
 The program itself does not contain a single if statement.
 Talking about imperative programming languages;
 the Haskell wc implementation has several if statements.
