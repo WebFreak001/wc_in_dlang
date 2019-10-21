@@ -26,13 +26,7 @@ bool split(char s) pure nothrow {
 }
 
 Line toLine(char[] l) pure {
-	return Line(
-		l.byCodePoint.walkLength,
-		l.splitter!(a => a == ' ' || a == '\t')
-			.map!strip
-			.filter!(l => !l.empty)
-			.walkLength
-		);
+	return Line(l.byCodePoint.walkLength, l.splitter.walkLength);
 }
 
 void main(string[] args) {
