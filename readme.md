@@ -50,9 +50,10 @@ At this stage its is very likely IO bound, and its fast enough anyway.
 I'll not claim that one language is faster than another.
 If you spend crazy time on a micro-benchmark and optimizing you are going to
 beat the competition.
-That's not real life, who cares.
-But I'll claim, that functional programming in D gives functional programming
-in Haskell a run for its money.
+That's not real life, who cares?
+
+__But I'll claim, that functional programming in D gives functional programming
+in Haskell a run for its money.__
 
 
 ### About Kaleidic Associates
